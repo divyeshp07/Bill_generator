@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const ProviderScope(child:  MyApp()));
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
-      static final navigatorKey = GlobalKey<NavigatorState>();
+  static final navigatorKey = GlobalKey<NavigatorState>();
 
   const MyApp({super.key});
 
@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: lighttheme,
-      routerConfig:router,
+      routerConfig: router,
     );
   }
 }
-

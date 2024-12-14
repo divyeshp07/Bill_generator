@@ -24,11 +24,11 @@
 //           Text(constants.producttxt,style: context.typography.bodyLarge,),
 //           Spacer(),
 //           ElevatedButton(onPressed: () {
-            
+
 //           }, child: Text(constants.edittxt)),
 //           SizedBox(width: context.spaces.space_100,),
 //           ElevatedButton(onPressed: () {
-            
+
 //           }, child: Text(constants.deletetxt))
 //         ],
 //       ),
@@ -46,13 +46,13 @@
 //           Text('datajd',style: context.typography.body.copyWith(fontWeight: FontWeight.normal),),
 //           Text('datakslsl',style: context.typography.body.copyWith(fontWeight: FontWeight.normal)),
 //           Text('datalms',style: context.typography.body.copyWith(fontWeight: FontWeight.normal))
-    
+
 //         ],
 //       )
 //     ],
 //               ),
 //             ),
-           
+
 //     );
 //   }
 // }
@@ -61,6 +61,7 @@ import 'package:bill_manager_jmd_task/core/constents/page_txt_contents.dart';
 import 'package:bill_manager_jmd_task/core/theme/colorpalet.dart';
 import 'package:bill_manager_jmd_task/core/theme/extension/app_theme_extension.dart';
 import 'package:bill_manager_jmd_task/view/widgets/productcard_Btn_widget.dart';
+import 'package:bill_manager_jmd_task/view/widgets/value_style_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
@@ -86,35 +87,43 @@ class ProductCard extends StatelessWidget {
                   style: context.typography.bodyLarge,
                 ),
                 Spacer(),
-             
-                                ProductCardBtnWidget(constants: constants,text: constants.edittxt,),
-
+                ProductCardBtnWidget(
+                  constants: constants,
+                  text: constants.edittxt,
+                  color: AppColorPalettes.blue,
+                ),
                 SizedBox(
                   width: context.spaces.space_100,
                 ),
-                ProductCardBtnWidget(constants: constants,text: constants.deletetxt,),
+                ProductCardBtnWidget(
+                  constants: constants,
+                  text: constants.deletetxt,
+                  color: AppColorPalettes.red500,
+                ),
               ],
             ),
-            SizedBox(    height:         context.spaces.space_75*2
-),
+            SizedBox(height: context.spaces.space_75 * 2),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-             
-                Productcard_hedding_text_widget(constants: constants,heddingtxt:    
-                   constants.quantitytxt,value:'1.0' ,
-),
+                Productcard_hedding_text_widget(
+                  constants: constants,
+                  heddingtxt: constants.quantitytxt,
+                  value: '1.0',
+                ),
                 // ),
-                Productcard_hedding_text_widget(constants: constants,heddingtxt:    
-                   constants.ratetxt,value: '100.0',
-),
-                Productcard_hedding_text_widget(constants: constants,heddingtxt:    
-                   constants.amounttxt,value: '100.00',
-),
-               
+                Productcard_hedding_text_widget(
+                  constants: constants,
+                  heddingtxt: constants.ratetxt,
+                  value: '100.0',
+                ),
+                Productcard_hedding_text_widget(
+                  constants: constants,
+                  heddingtxt: constants.amounttxt,
+                  value: '100.00',
+                ),
               ],
             ),
-           
           ],
         ),
       ),
@@ -142,13 +151,11 @@ class Productcard_hedding_text_widget extends StatelessWidget {
         Text(
           heddingtxt,
           style: context.typography.body.copyWith(
-            color: context.colors.textSubtle,
-            fontWeight: FontWeight.normal,
-          ),
+              color: context.colors.textSubtle,
+              fontSize: context.spaces.space_75 * 2.5),
         ),
-        Text('\$${value}',style: context.typography.bodyLarge.copyWith(fontWeight: FontWeight.normal,fontSize: context.spaces.space_100*2),)
+        ValuesStyleWidget(value: value)
       ],
     );
   }
 }
-
