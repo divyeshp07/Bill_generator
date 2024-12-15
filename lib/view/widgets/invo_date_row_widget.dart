@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:bill_manager_jmd_task/core/constents/page_txt_contents.dart';
 import 'package:bill_manager_jmd_task/core/theme/colorpalet.dart';
 import 'package:bill_manager_jmd_task/core/theme/extension/app_theme_extension.dart';
@@ -15,7 +13,6 @@ class InvoiceDetailsWidget extends ConsumerWidget {
     required this.controller,
   });
   TextEditingController controller;
-  // TextEditingController customerNamecontroller = TextEditingController();
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final constants = ref.watch(pageConstentsProvider);
