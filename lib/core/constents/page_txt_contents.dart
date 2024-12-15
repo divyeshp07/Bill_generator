@@ -14,6 +14,7 @@ class GenerateInvoicePage {
 
   final invoiceUuid = Uuid().v4();
   final customernametxt = 'Customer Name';
+  final discountrateTxt = '10';
   final productdetailstxt = "Product Details";
   final producttxt = "Product ";
   final edittxt = 'Edit';
