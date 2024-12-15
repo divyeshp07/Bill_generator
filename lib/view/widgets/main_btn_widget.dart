@@ -1,19 +1,19 @@
 import 'package:bill_manager_jmd_task/core/constents/page_txt_contents.dart';
-import 'package:bill_manager_jmd_task/core/theme/colorpalet.dart';
 import 'package:bill_manager_jmd_task/core/theme/extension/app_theme_extension.dart';
 import 'package:flutter/material.dart';
 
 class MainBtnWidget extends StatelessWidget {
-  const MainBtnWidget({
-    super.key,
-    required this.constants,
-    required this.mainbtnTxt,
-    required this.backgroundColor,
-  });
+  const MainBtnWidget(
+      {super.key,
+      required this.constants,
+      required this.mainbtnTxt,
+      required this.backgroundColor,
+      required this.onPressed});
   final String mainbtnTxt;
 
   final GenerateInvoicePage constants;
   final Color backgroundColor;
+  final Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +26,9 @@ class MainBtnWidget extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: backgroundColor,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4), // Square corners
+                      borderRadius: BorderRadius.circular(4),
                     )),
-                onPressed: () {},
+                onPressed: onPressed,
                 child: Text(
                   mainbtnTxt,
                   style: TextStyle(

@@ -3,21 +3,23 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-      static const routePath = '/';
-
+  static const routePath = '/';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-leading: IconButton(onPressed: () {
-  
-}, icon: Icon(Icons.menu_rounded)),
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu_rounded)),
       ),
-floatingActionButton: FloatingActionButton.extended(onPressed: () {
-  Navigator.push(context, MaterialPageRoute(builder: (context) =>const CreateBillPage(),));
-  
-}, label: Text('Create new bill')),
+      floatingActionButton: FloatingActionButton.extended(
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const CreateBillPage(),
+                ));
+          },
+          label: Text('Create new bill')),
     );
   }
 }

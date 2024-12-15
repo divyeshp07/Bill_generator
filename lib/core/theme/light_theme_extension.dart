@@ -3,10 +3,6 @@ import 'package:bill_manager_jmd_task/core/theme/extension/app_color_extension.d
 import 'package:bill_manager_jmd_task/core/theme/extension/space_extension.dart';
 import 'package:bill_manager_jmd_task/core/theme/extension/typography_extension.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'package:riverpod_annotation/riverpod_annotation.dart';
-
 
 final lighttheme = ThemeData(
     brightness: Brightness.light,
@@ -121,6 +117,4 @@ final lighttheme = ThemeData(
         ),
       ),
       //AppShadowExtension
-    
     ]);
-
